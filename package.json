@@ -1,0 +1,24 @@
+{
+  "name": "front-end-developer-test-project",
+  "version": "1.0.0",
+  "description": "This project is to a test for a front-end position",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "front-end-developer-test-project"
+  },
+  "keywords": [
+    "front-end-test"
+  ],
+  "author": "Kevin Rafael Velez Bernal",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.16.4",
+    "@mui/material": "^5.16.4"
+  }
+}
