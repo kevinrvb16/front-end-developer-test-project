@@ -1,9 +1,8 @@
+import header from "./components/header.js"
+import container from "./components/container.js"
+import helpMe from "./components/help.js";
 document.addEventListener("DOMContentLoaded", () => {
-    const header = document.createElement("header");
-    header.className = "notionHeader"
-    const doubleArrowIcon = document.createElement("span");
-    doubleArrowIcon.className = "material-icons icon-pattner-color";
-    doubleArrowIcon.textContent = "keyboard_double_arrow_right"
-    header.appendChild(doubleArrowIcon);
-    document.body.prepend(header)
+    document.body.prepend(header());
+    document.body.append(container());
+    document.body.append(helpMe())
 })
