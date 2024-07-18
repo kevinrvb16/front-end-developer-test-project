@@ -1,6 +1,7 @@
 import header from "./components/header.js";
 import container from "./components/container.js";
 import helpMe from "./components/help.js";
+import moveCursor from "./utils/cursor.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     document.body.prepend(header());
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let lastTwoPressedKeys = [];
     let h1BeingCreated = false;
-    let contentToAnalise = document.getElementById("contentToAnalise");
+    const contentToAnalise = document.getElementById("contentToAnalise");
 
     contentToAnalise.addEventListener("input", (event) => {
         lastTwoPressedKeys.push(event.data);
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (h1BeingCreated) {
             let h1 = contentToAnalise.querySelector("h1:last-child");
-            if (h1) {
+            if (h1 && event.inputType !== "deleteContentBackward") {
                 h1.innerHTML += event.data;
                 moveCursor(h1);//inside
             }
@@ -43,15 +44,4 @@ document.addEventListener("DOMContentLoaded", () => {
             moveCursor(h1);//inside
         }
     });
-
-    function moveCursor(element) {
-        const range = document.createRange();
-        console.log(range)
-        const sel = window.getSelection();
-        console.log('sel', sel)
-        console.log(range.selectNodeContents(element));
-        range.collapse(false);
-        sel.removeAllRanges();
-        sel.addRange(range);
-    }
 });
