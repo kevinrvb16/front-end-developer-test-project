@@ -19,11 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
             lastTwoPressedKeys.shift();
         }
         verifyEmpty(contentToAnalise);
-        console.log(event.inputType)
+
         if (event.inputType === "insertLineBreak" || event.inputType === "insertParagraph") {
             h1BeingCreated = false;
             moveCursor(contentToAnalise);//to end
-            console.log(event.inputType)
             const lastDIV = contentToAnalise.lastChild;
             verifyEmpty(lastDIV);
             return;
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (h1BeingCreated) {
             let h1 = contentToAnalise.querySelector("h1:last-child");
             if (h1 && event.inputType !== "deleteContentBackward") {
-                moveCursor(h1);//inside
+                moveCursor(h1);//to inside
             }
         }
 
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let h1 = contentToAnalise.querySelector("h1:last-child");
             verifyEmpty(h1, "Heading 1");
             verifyEmpty(contentToAnalise);
-            moveCursor(h1);//inside
+            moveCursor(h1);//to inside
         }
     });
 });
