@@ -19,17 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
             lastTwoPressedKeys.shift();
         }
         verifyEmpty(contentToAnalise);
-
-        if (event.inputType === "insertLineBreak") {
+        console.log(event.inputType)
+        if (event.inputType === "insertLineBreak" || event.inputType === "insertParagraph") {
             h1BeingCreated = false;
             moveCursor(contentToAnalise);//to end
+            console.log(event.inputType)
+            const lastDIV = contentToAnalise.lastChild;
+            verifyEmpty(lastDIV);
             return;
         }
 
         if (h1BeingCreated) {
             let h1 = contentToAnalise.querySelector("h1:last-child");
             if (h1 && event.inputType !== "deleteContentBackward") {
-                h1.innerHTML += event.data;
                 moveCursor(h1);//inside
             }
         }
@@ -38,10 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
             h1BeingCreated = true;
             contentToAnalise.innerHTML = contentToAnalise.innerHTML.replace("/1", "<h1></h1>");
             let h1 = contentToAnalise.querySelector("h1:last-child");
-            h1.setAttribute("contentEditable", true);
-            h1.setAttribute("data-content-editable-leaf", true);
-            h1.setAttribute("spellcheck", true);
-            h1.setAttribute("placeholder", "Header");
+            verifyEmpty(h1, "Heading 1");
             verifyEmpty(contentToAnalise);
             moveCursor(h1);//inside
         }

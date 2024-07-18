@@ -5,4 +5,18 @@ const createElement = (tag, className, content = null) => {
     return element;
 }
 
-export default createElement;
+const verifyEmpty = (element, placeholder = "Type / for blocks, @ to link docs or people") => {
+    console.log(element)
+    if (element.innerText.trim() === "") {
+        element.setAttribute("contentEditable", true);
+        element.classList.add("empty");
+        element.setAttribute("placeholder", placeholder);
+        element.setAttribute("data-content-editable-leaf", true);
+        element.setAttribute("spellcheck", true);
+        console.log(element)
+    } else {
+        element.classList.remove("empty");
+    }
+}
+
+export {createElement, verifyEmpty};

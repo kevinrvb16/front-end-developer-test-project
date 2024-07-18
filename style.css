@@ -137,8 +137,12 @@ p, a {
     border-radius: 50%;
 }
 
-.explanation {
+.deffault-color {
     color: #4e5563;
+}
+
+h1 {
+    color: #222937;
 }
 
 .border-bottom {

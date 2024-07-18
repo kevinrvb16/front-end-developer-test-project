@@ -6,10 +6,10 @@ const container = () => {
     const explanationText = 
         createElement(
             "p",
-            "explanation",
+            "deffault-color",
             "Your goal is to make a page that looks exactly like this one, and has the ability to create H1 text simply by typing / then 1, then typing text, and hitting enter."
         );
-    const textarea = createElement("div", "pt-2 mt-2 empty");
+    const textarea = createElement("div", "pt-2 mt-2 deffault-color empty");
     
     textarea.id = "contentToAnalise";
     textarea.setAttribute("contentEditable", true);
