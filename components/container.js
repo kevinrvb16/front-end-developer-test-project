@@ -1,4 +1,4 @@
-import createElement from "../utils/element.js";
+import { createElement } from "../utils/element.js";
 import barCard from "./barCard.js";
 const container = () => {
     const container = createElement("div", "max-w-45-vw d-flex flex-column margin-auto");
@@ -12,8 +12,8 @@ const container = () => {
     const textarea = createElement("div", "pt-2 mt-2 empty");
     
     textarea.id = "contentToAnalise";
-    textarea.contentEditable = true;
-    textarea.placeholder = "Type / for blocks, @ to link docs or people";
+    textarea.setAttribute("contentEditable", true);
+    textarea.setAttribute("placeholder", "Type / for blocks, @ to link docs or people");
 
     container.appendChild(barCard());
     container.appendChild(h1);

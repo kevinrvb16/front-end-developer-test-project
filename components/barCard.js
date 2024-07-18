@@ -1,4 +1,4 @@
-import createElement from "../utils/element.js";
+import { createElement } from "../utils/element.js";
 const barCard = () => {
     const bar = createElement("div", "d-flex border-bar mt-2 p-bar secondary-color space-between");
     const leftSideBar = createElement("div", "d-flex align-center");

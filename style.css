@@ -156,7 +156,7 @@ p, a {
     outline: none;
 }
 
-#contentToAnalise.empty::before {
+[contenteditable]:empty:after {
     color: #9ea3ae;
     font-family: sans-serif;
     content: attr(placeholder)

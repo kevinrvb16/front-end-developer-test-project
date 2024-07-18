@@ -1,4 +1,4 @@
-import createElement from "../utils/element.js";
+import { createElement } from "../utils/element.js";
 const header = () => {
     const header = createElement("header", "notionHeader d-flex secondary-color space-between mx-1");
     const doubleArrowIcon = createElement("span", "material-icons smaller-icon icon-pattner-color", "keyboard_double_arrow_right");
