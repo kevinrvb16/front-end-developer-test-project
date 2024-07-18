@@ -149,17 +149,17 @@ p, a {
     padding-bottom: 0.4em;
 }
 
-.no-border {
-    height: 100%;
-    border: none;
-    box-sizing: border-box;
+#contentToAnalise {
+    padding: 10px;
+    overflow-y: auto;
+    white-space: pre-wrap;
     outline: none;
-    resize: none;
 }
 
-.no-border::placeholder {
+#contentToAnalise.empty::before {
     color: #9ea3ae;
     font-family: sans-serif;
+    content: attr(placeholder)
 }
 
 .pt-2 {

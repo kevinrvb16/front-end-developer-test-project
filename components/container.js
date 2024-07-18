@@ -8,16 +8,20 @@ const container = () => {
             "p",
             "explanation",
             "Your goal is to make a page that looks exactly like this one, and has the ability to create H1 text simply by typing / then 1, then typing text, and hitting enter."
-        )
-    const textarea = createElement("textarea", "no-border pt-2 mt-2")
-    textarea.placeholder = "Type / for blocks, @ to link docs or people"
+        );
+    const textarea = createElement("div", "pt-2 mt-2 empty");
+    
+    textarea.id = "contentToAnalise";
+    textarea.contentEditable = true;
+    textarea.placeholder = "Type / for blocks, @ to link docs or people";
+
     container.appendChild(barCard());
     container.appendChild(h1);
     container.appendChild(explanationText);
-    container.appendChild(textarea)
+    container.appendChild(textarea);
 
 
-    return container
+    return container;
 }
 
 export default container;
