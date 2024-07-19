@@ -4,7 +4,8 @@ body {
 
 p, a {
     margin: 0;
-    font-size: 14px
+    font-size: 14px;
+    line-height: 20px;
 }
 .notionHeader {
     margin-top: 1.5em;
@@ -129,6 +130,10 @@ p, a {
     margin-left: 0.2em;
 }
 
+.ml-fourth {
+    margin-left: 0.25em;
+}
+
 .w-24 {
     width: 24px;
 }
@@ -170,7 +175,7 @@ h1 {
     padding-top: 2em;
 }
 
-.more-color {
+.black-color {
     color: #222937;
 }
 
@@ -184,4 +189,84 @@ h1 {
     right: 1em;
     right: 1em;
     display: inline-block;
+}
+
+.menu-select {
+    width: 18vw;
+    height: 55vh;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.2em;
+    box-shadow: rgba(15, 15, 15, 0.05) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 3px 6px, rgba(15, 15, 15, 0.2) 0px 9px 24px;
+}
+
+.p-half {
+    padding: 0.5em;
+}
+
+.quantity {
+    background-color: #3e66ab;
+    color: white;
+    font-size: 14px;
+    padding: 0.2em 0.175em;
+    border-radius: 4px;
+}
+
+.font-30 {
+    font-size: 30px;
+}
+
+.font-cursive {
+    font-family: cursive;
+}
+
+.font-sans-serif {
+    font-family: sans-serif;
+}
+
+.pt-half {
+    padding-top: 0.5em;
+}
+.font-12 {
+    font-size: 12px;
+}
+
+.mb-quarter {
+    margin-bottom: 0.25em;
+}
+
+.pb-tenth {
+    padding-bottom: 0.1em;
+}
+
+.selected {
+    background-color: #f8f4f4;
+}
+
+.pl-half {
+    padding-left: 0.5em;
+}
+
+.pt-075 {
+    padding-top: 0.75em;
+}
+
+.py-025 {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+.pl-06 {
+    padding-left: 0.6em;
+}
+
+.resume {
+    padding-top: 0.6em;
+    padding-bottom: 0.785em;
+}
+
+.pb-09 {
+    padding-bottom: 0.9em;
+}
+
+.font-system-ui {
+    font-family: system-ui, -apple-system;
 }

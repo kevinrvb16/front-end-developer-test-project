@@ -12,7 +12,7 @@ const barCard = () => {
     const rightSideHeader = createElement("div", "d-flex align-center");
     const taskAltIcon = createElement("span", "smaller-icon material-icons", "task_alt");
     const cloudQueueIcon = createElement("span", "smaller-icon material-icons ml-half color-green", "cloud_queue");
-    const moreVertIcon = createElement("span", "material-icons ml-fifth more-color", "more_vert");
+    const moreVertIcon = createElement("span", "material-icons ml-fifth black-color", "more_vert");
 
     avatar.src = "../assets/bunny-with-pink-ears-pink-nose-sits-green-background.jpg";
     avatar.alt = "bunny with pink ears pink nose sits green background";

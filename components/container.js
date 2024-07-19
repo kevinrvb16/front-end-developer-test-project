@@ -9,17 +9,15 @@ const container = () => {
             "deffault-color",
             "Your goal is to make a page that looks exactly like this one, and has the ability to create H1 text simply by typing / then 1, then typing text, and hitting enter."
         );
-    const textarea = createElement("div", "pt-2 mt-2 deffault-color empty");
-    
+    const textarea = createElement("div", "pt-2 mt-2 deffault-color");
+    const nextLine = createElement("p", "empty", "");
     textarea.id = "contentToAnalise";
-    textarea.setAttribute("contentEditable", true);
-    textarea.setAttribute("placeholder", "Type / for blocks, @ to link docs or people");
-
+    textarea.setAttribute("contentEditable", true)
     container.appendChild(barCard());
-    container.appendChild(h1);
-    container.appendChild(explanationText);
+    textarea.appendChild(h1);
+    textarea.appendChild(explanationText);
     container.appendChild(textarea);
-
+    textarea.appendChild(nextLine);
 
     return container;
 }
