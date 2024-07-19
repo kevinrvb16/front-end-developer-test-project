@@ -150,6 +150,14 @@ h1 {
     color: #222937;
 }
 
+.focusH1 {
+    position: relative;
+    z-index: 9999;
+    margin-left: -26px;
+    color: #d4d4dc;
+    top: -9px;
+    padding-right: 8px;
+}
 .border-bottom {
     border-bottom: 1px solid #e5e7eb;
 }
@@ -163,6 +171,7 @@ h1 {
     overflow-y: auto;
     white-space: pre-wrap;
     outline: none;
+    overflow: visible;
 }
 
 [contenteditable]:empty:after {
@@ -269,4 +278,12 @@ h1 {
 
 .font-system-ui {
     font-family: system-ui, -apple-system;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility:visible
 }
